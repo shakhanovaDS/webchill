@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Hello world</p>
+    <form th:action="@{/getWeather}" th:object="${weather}" method="post">
+        <p>Country: <input type="text" th:field="*{country}"/></p>
+        <p>Town: <input type="text" th:field="*{town}"/></p>
+        <p><input type="submit" value="Submit"/></p>
+    </form>
+</body>
+</html>

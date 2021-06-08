@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Weathers</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body bgcolor="#E6E6FA">
+
+<table border="1">
+  <tr>
+    <th>Country</th>
+    <th>City</th>
+    <th>Temp</th>
+    <th>Main</th>
+    <th>Desc</th>
+  </tr>
+
+  <tr th:each="weather : ${list}">
+    <td th:utext="${weather.getCountry()}">country</td>
+    <td th:utext="${weather.getTown()}">town</td>
+    <td th:utext="${weather.getTemp()}">temp</td>
+    <td th:utext="${weather.getMain()}">main</td>
+    <td th:utext="${weather.getDesc()}">desc</td>
+  </tr>
+</table>
+</body>
+</html>
